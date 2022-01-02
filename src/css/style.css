@@ -1,0 +1,327 @@
+*{
+  margin:0;
+  padding:0;
+  
+}
+/*fondo*/
+body{
+    background: url('../img/fondo.jpg') no-repeat center ; 
+    min-block-size: 100vh; 
+    padding-top:1px ; 
+    font-family: 'Philosopher', sans-serif;  
+    background-size:cover;
+}
+h1{
+  
+  text-align: center;
+  color: turquoise;
+  font-size: 26px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navegador{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  text-align:center;
+  height: 40px; 
+  background: #18ffff; 
+
+}
+a{
+  list-style:none;
+  display:inline-block;
+  padding:15px;
+}
+.carts{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  text-align:center;
+  padding:80px;
+}
+.carta {
+
+  width: 50%;
+  height: 150%;
+  color: #76ffff;
+  background-color:#000000;
+  border-radius: 10px;
+  margin:10px;
+}
+.carta2{
+  
+  width: 50%;
+  height: 80%;
+  color:#0d47a1;
+  background-color: #6ab7ff;
+  border-radius:10px 5px;
+}
+.im{
+  min-max-width: 70%; 
+  width: 70%;
+   height: auto; 
+  margin-bottom: -7px;
+  height:40%;
+
+}
+h2{
+  font-size:90%;
+}
+/*css puro*/
+.frace{
+    color:transparent;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  
+    -webkit-text-stroke: 2px white;
+    box-sizing: border-box;
+    font-family: 'Coiny', cursive;
+    font-size:22px;
+}
+/*boton de busqueda de api*/
+button{
+  height: 50%;
+  border: none;
+  width: 100%;
+  color: rgb(242, 241, 248);
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(249, 248, 250, 0.959);
+  cursor: pointer;
+}
+button:hover{
+  background-color:#76ffff ;
+  color: #4f5b62;
+}
+/*etiqueta*/
+p{
+  color:rgb(221, 247, 76);
+  }
+
+/*contenedor api*/
+.poke {
+  border-radius: 5px 12px;
+  text-align:center;
+  max-width: 50%;
+  max-height: 800%;
+  margin: auto;
+  box-shadow: 3px 0px 30px 0px rgba(232, 240, 248, 0.959);
+}
+.poke img{
+  height: 150%;
+  }
+ 
+/*-----boton popup----*/
+.pop-btn{
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  color: rgb(237, 236, 243);
+  background-color: rgba(25, 156, 218, 0.87);
+  font-size: 15px;
+  border: radius 3px;
+  cursor: pointer;
+}
+
+
+/*boton publicar*/
+.btnpublicar{
+    position: fixed;
+    right: 5px;
+    line-height: 50px;
+    bottom:18px;
+    }
+    .msm {    
+    display: inline-block;
+    margin-left: 3%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration:none;
+    color:#e9edf3;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 0px rgba(249, 248, 250, 0.959);
+         
+    }
+
+    .msm:hover{
+    color: #f9f9fa;
+    background: rgba(24, 142, 238, 0.911);
+    
+    }
+    .btnpublicar .msm:hover::before{
+    margin-top: -44px;
+    }
+/*color al fondo de la pantalla cuando se abra la ventana emergente*/
+.overlay{
+  background: rgba(153, 224, 250, 0.466);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+
+}
+/*para ser visible la ventana emergente*/
+.overlay.active{
+ visibility: visible;
+
+}
+/*style a la ventna emergente y elementos que lo contiene*/
+.pop-up{
+  background: rgba(248, 249, 252, 0.801);
+  box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
+  border-radius:5px;
+  padding: 8px 18px;
+  text-align: center;
+  width: 350px;
+  opacity:0 ;
+  transition: .1s ease all;
+  transform: scale(0.7);
+}
+.pop-up .boton-cerrar-pop-up{
+  font-size: 18px;
+  line-height: 16px;
+  display:block;
+  text-align: right;
+  color: rgb(27, 81, 117);
+  transition: 3s ease all;
+
+}
+.pop-up .boton-cerrar-pop-up:hover{
+  color: #0ea4e0;;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.text-public{
+font-size: 25px; 
+margin-bottom: 10px;  
+color: #1348CF;
+font-family: 'Poppins', sans-serif;
+opacity: 0;
+}
+
+.pop-up form  textarea{
+width: 100%;
+min-height: 100px;
+text-align: left;
+border-radius: 8px;
+border: transparent;
+outline: none;
+border: none;
+resize: none;
+margin: 0px;
+opacity: 0;
+}
+
+.pop-up form .submit {
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  width: 200px;
+  color: rgb(237, 236, 243);
+  background-color: #1348CF;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s  ease all;
+  opacity: 0;
+}
+.pop-up form textarea:valid ~ .submit{
+color: white;
+background-color: rgba(16, 78, 212, 0.87);
+cursor:pointer;  
+}
+
+/*animaciones del pop-up*/
+.pop-up.active{
+opacity: 1;
+transform: scale(1);
+
+}
+.pop-up.active  .text-public {
+animation: entrada .8s ease .3s forwards;
+
+}
+.pop-up.active  textarea{
+animation: txt 1s ease 1s forwards;
+}
+.pop-up.active  label{
+animation: img 1s ease 1s forwards;
+}
+.pop-up.active .submit{
+animation: submit 1s ease 1s forwards;
+}
+@keyframes img{
+from{
+  transform:translateY(-20PX) ;
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+@keyframes entrada{
+from{
+  transform: translateY(-20px);
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+@keyframes txt {
+
+from{
+  opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+@keyframes submit {
+
+from{
+  opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+    @media (max-width: 991px) {
+  
+    .btnpublicar .msm:hover  {
+        color:#d9f82c;
+        
+    }
+    
+    }
+    @media (max-width: 768px) {
+      .btnpublicar{
+          padding: 0 5px;       
+      }
+      .pop-up{
+        padding: 1 40px; 
+      }
+     }
+    
+
+    @media (max-width: 576px) {
+    .btnpublicar{
+          padding: 0 5px;
+      }
+      .pop-up{
+        padding: 1 40px; 
+      }
+    }
